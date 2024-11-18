@@ -1,0 +1,9 @@
+.txtRed{
+    color: red;
+}
+
+.box{
+    width: 400px;
+    height: 200px;
+    border: 2px solid black;
+}

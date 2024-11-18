@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+h3{
+    color: green;
+}
+
+.box{
+    width: 400px;
+    height: auto;
+    border: 2px solid black;
+}
