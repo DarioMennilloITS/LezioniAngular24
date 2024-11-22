@@ -14,6 +14,7 @@ export class PrimoComponentComponent{
     numPartecipanti: number = 28;
     presenza:boolean = true;
     respoCorso!: string;
+    mioNome:string = "Dario"
 
     constructor(){
         console.log(`Sono in ${this.sede}`);  

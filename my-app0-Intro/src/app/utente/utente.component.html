@@ -1,0 +1,22 @@
+<button (click)="onClickBtn(selectedUtente.nome)">
+    Clicca qui
+</button>
+
+<!-- nomeUser è una prop di classe -->
+<h2>Ciao {{nomeUser}} </h2>
+
+
+<div>
+    <!-- OSS: l'evento va inserito tra parentesi tonde -->
+    <button (click)="onSelectUtente(selectedUtente.nome)">
+
+        <span> {{selectedUtente.nome}} {{selectedUtente.cognome}} </span>
+        <img [src]="imgPath" alt="" width="40px" height="auto">
+
+    </button>
+
+    <p>Utente selezionato {{selectedUtente.nome}} </p>
+</div>
+
+
+<!-- Utilizzando gli eventi mouse crea un div all'interno del quale all'ingresso del mouse cambio colore al background -->
