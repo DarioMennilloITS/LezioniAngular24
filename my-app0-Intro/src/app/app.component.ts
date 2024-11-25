@@ -4,13 +4,14 @@ import { PrimoComponentComponent } from './primo-component/primo-component.compo
 import { SecondoComponent } from "./secondo/secondo.component";
 import { UtentiComponent } from "./utenti/utenti.component";
 import { UtenteComponent } from "./utente/utente.component";
+import { EsercizioComponent } from './esercizio/esercizio.component';
 
 //@Component si chiama Decorator ed è una caratteristica di Typescript
 //Il component definisce attrraverso un oggetto JS come è fatta la classe sottostante e di che "tipo" è
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PrimoComponentComponent, SecondoComponent, UtentiComponent, UtenteComponent],
+  imports: [RouterOutlet, PrimoComponentComponent, SecondoComponent, UtentiComponent, UtenteComponent, EsercizioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

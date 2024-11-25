@@ -1,0 +1,12 @@
+<h2>Esercizio</h2>
+
+<div class="box" (mousemove)="onChangeBgColor()" [style]="styleStr"></div>
+
+<h4>I valorei di ogni singolo colore</h4>
+
+<ul>
+    <li>Red: {{bgColor.r}} </li>
+    <li>Green: {{bgColor.g}} </li>
+    <li>Blue: {{bgColor.b}} </li>
+    <li [textContent]="bgColor.b"></li>
+</ul>

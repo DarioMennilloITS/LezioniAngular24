@@ -1,0 +1,32 @@
+<h2>Studenti del corso</h2>
+
+<ul>
+
+    <!-- id, nome e cognome sono diventate delle Custom Properties -->
+    <!-- <li><app-studente [id]="id" [nome]="nome" [cognome]="cognome"></app-studente></li> -->
+
+    <!-- Nota: ogni volta che chiamo il selettore creo una nuova istanza della classe StudenteComponent -->
+    <!-- <li><app-studente [id]="id2" [nome]="nome2" [cognome]="cognome2"></app-studente></li> -->
+    <!-- <li><app-studente></app-studente></li> -->
+
+    <li>
+        <app-studente 
+        [id]="studenti[0].id" 
+        [nome]="studenti[0].nome" 
+        [cognome]="studenti[0].cognome" 
+        (selectStud)="onSelectStud($event)"></app-studente> 
+    </li>
+     <li>   <app-studente 
+        [id]="studenti[1].id" 
+        [nome]="studenti[1].nome" 
+        [cognome]="studenti[1].cognome"
+        (selectStud)="onSelectStud($event)"></app-studente> 
+    </li>
+
+</ul>
+
+<div class="">
+    <h4>Saluti da parte dello studente</h4>
+    <h5>{{saluto}}</h5>
+
+</div>
