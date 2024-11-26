@@ -1,8 +1,6 @@
-export const DUMMY_STUDS: {
-    id: string,
-    nome: string,
-    cognome: string
-}[] = [
+import { type Studente } from "./studente/studente.model";
+
+export const DUMMY_STUDS: Studente[] = [
     {
         id: "s1",
         nome: "Paolo",

@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
 import { StudenteComponent } from "./studente/studente.component";
 import { DUMMY_STUDS } from './DUMMY_STUDS';
+import { type Studente } from './studente/studente.model';
+
+//ATT: a volte può capitare di dichiarare un'interface in alto prima della dichiariazione della classe
+// interface User{
+//   id: number,
+//   name: string,
+//   cognome: string
+// }
+
 
 @Component({
   selector: 'app-studenti',
@@ -32,7 +41,7 @@ export class StudentiComponent {
   //   }
   // ]
 
-  studenti = DUMMY_STUDS;
+  studenti: Studente[] = DUMMY_STUDS;
 
   saluto!: string;
 
