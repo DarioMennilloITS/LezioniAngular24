@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PizzeriaComponent } from "./pizzeria/pizzeria.component";
+import { Lez4StatementComponent } from "./lez4-statement/lez4-statement.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PizzeriaComponent],
+  imports: [RouterOutlet, Lez4StatementComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-app2-pizzeriaBellaITS';
+  title = 'my-app3-Lezioni';
 }

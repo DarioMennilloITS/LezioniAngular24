@@ -1,1 +1,15 @@
-<p>pizzeria works!</p>
+<h1>Pizzeria Bella ITS</h1>
+
+<div class="container">
+
+    <div class="box">
+        <app-lista-pizze 
+        [listaPizzeChild]="listaPizzeParent"
+        (selectedPizza)="onSelectedPizza($event)"
+        ></app-lista-pizze>
+    </div>
+    <div class="box">
+        <app-pizza [pizza]="selectPizza"></app-pizza>
+    </div>
+
+</div>

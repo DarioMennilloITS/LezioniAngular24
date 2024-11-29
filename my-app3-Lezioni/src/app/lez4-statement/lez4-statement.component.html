@@ -1,0 +1,78 @@
+<h2>For & If</h2>
+
+ <!-- Versione Moderna -->
+
+ <h3>Lista Studenti</h3>
+
+ <!-- @for() @if() sono delle built-in directives (direttive strutturali)  -->
+ <!-- track è obbligatorio. Migliore rendering e performance -->
+  <!-- $index è l'indice dell'array -->
+<ul>
+    @for(stud of listaStudenti; track $index){
+    <li>id studente: {{$index}} {{stud}} </li>
+    }
+</ul>
+
+<h3>Lista Docenti disponibili</h3>
+<ul>
+    @for(doc of listaDocenti; track doc.id;){
+        @if(doc.disponibilita){
+            <li> {{doc.nome}} </li>
+        }
+        @else {
+            <li>{{doc.nome}} non è disponibile</li>
+        }
+    }
+</ul>
+
+<h3>Lista Materie</h3>
+@for(mat of listaMaterie; track $index){
+    <li>{{mat}}</li>
+}
+@if(listaMaterie.length > 0 && listaMaterie.length <= 3){
+    <p>Ci sono {{listaMaterie.length}} materie</p>
+}@else if (listaMaterie.length > 3){
+    <p>Ci sono {{listaMaterie.length}} materie, sono un bel pò </p>
+}@else {
+    <p>Non ci sono materie</p>
+}
+
+<h3>Responsabili Corso</h3>
+@for(respo of listaRespoCorso; track respo.id){
+    <app-responsabile [respo]="respo"></app-responsabile>
+}
+
+
+<!-- <h2>Versione Legacy</h2> -->
+<!-- La versione legacy a partire da Angular 15 ha bisogno di essere importata nel component.ts (ATT: l'import va fatto dai moduli @angular/commons). Nelle versioni precedenti non va importata ma non esistono @for() e @if() -->
+
+<!-- <ul> -->
+    <!-- * indica una directive strutturale che manipola il DOM -->
+    <!-- <li *ngFor="let doc of listaDocenti">
+        <span *ngIf="doc.disponibilita; else nonDisp">
+            {{doc.nome}}
+        </span>
+        
+        <ng-template #nonDisp>
+            Questo docente {{doc.nome}} non è disponibile
+        </ng-template>
+    </li>
+</ul>
+
+<h3>Materie</h3>
+
+<p *ngIf="listaMaterie.length > 0 && listaMaterie.length <= 3; else tanteMaterie">
+    Ci sono {{listaMaterie.length}} materie
+</p>
+
+<ng-template #tanteMaterie>
+    <div *ngIf="listaMaterie.length > 3; else noMaterie">
+        <p>Hai tante materie</p>
+    </div>
+    
+    
+    <ng-template #noMaterie>
+        <p>Non hai materie</p>
+    </ng-template>
+    
+</ng-template> -->

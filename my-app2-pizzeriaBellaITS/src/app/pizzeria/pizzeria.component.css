@@ -1,0 +1,13 @@
+.container{
+    width: 80%;
+    height: auto;
+
+}
+
+.box{
+    width: 40%;
+    height: auto;
+    border: 1px solid black;
+    float: left;
+    margin-right: 8%;
+}

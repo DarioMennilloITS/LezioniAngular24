@@ -43,7 +43,7 @@ export class StudentiComponent {
 
   studenti: Studente[] = DUMMY_STUDS;
 
-  saluto!: string;
+  saluto?: string;
 
   onSelectStud(info: string){
     console.log("Sono nel parent e stampo la seguente info: " + info);

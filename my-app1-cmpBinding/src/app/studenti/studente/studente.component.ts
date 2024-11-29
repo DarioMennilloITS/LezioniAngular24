@@ -12,7 +12,7 @@ export class StudenteComponent {
   //ATT: quando uso il @Input() importo dall'angular core.
   //CReo una Custom Property
   //Stabilisco che la prop marcata con @Input() venga ricevuta dal component tramite il parent
-  @Input({required: true}) id!: string;
+  @Input() id!: string;
   
   @Input({required: true}) nome!:string;
   
