@@ -1,0 +1,9 @@
+<div>
+    <button (click)="onSelectRespo()">
+        <!-- Dato che nome adesso è un signal allora utilizzo le parentesi () per renderizzare -->
+        <span>
+            {{nome()}} {{cognome()}} 
+            <img src="{{image()}}" alt="" width="50px" height="auto">
+        </span>
+    </button>
+</div>

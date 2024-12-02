@@ -1,3 +1,13 @@
 <h1>Signals</h1>
 
 <app-intro></app-intro>
+
+<hr>
+@for(respo of responsabili; track respo.id){
+    <app-user 
+    [nome]="respo.nome" 
+    [cognome]="respo.cognome"
+    [imageAvatar]="respo.image"
+    (select)="onSelectedRespo($event)">
+    </app-user>
+}

@@ -2,6 +2,16 @@
 
 <div>
     <button (click)="onSelectRespo()">
-        <span> {{selectedRespo.nome}} {{selectedRespo.cognome}}</span>
+        <!-- Anche le proprietà vanno modificate -->
+        <!-- <span> {{selectedRespo.nome}} {{selectedRespo.cognome}}</span> -->
+        <span> 
+            {{selectedRespo().nome}}
+            {{selectedRespo().cognome}}
+            <img 
+            src="{{imagePath()}} " 
+            alt=""
+            width="50px"
+            height="auto">
+        </span>
     </button>
 </div>
