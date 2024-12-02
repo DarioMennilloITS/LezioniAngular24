@@ -1,13 +1,14 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Responsabile } from './responsabile/responsabile.model';
 import { ResponsabileComponent } from "./responsabile/responsabile.component";
 import { RESPO_DB } from './RESPO_DB';
+import { CorsoComponent } from './corsi/corso/corso.component';
 
 @Component({
   selector: 'app-lez4-statement',
   standalone: true,
-  imports: [NgFor, NgIf, ResponsabileComponent],
+  imports: [NgFor, NgIf, ResponsabileComponent, CorsoComponent],
   templateUrl: './lez4-statement.component.html',
   styleUrl: './lez4-statement.component.css'
 })
@@ -45,5 +46,20 @@ export class Lez4StatementComponent {
   listaMaterie: string[] = ["Angular", "Javascript"];
 
   listaRespoCorso: Responsabile[] = RESPO_DB;
+  respoDisponibilita!: string;
+  // setto a folse is open
+  isClosed: boolean = false;
 
+  onMostraDisponibilita(disponibilita: string){
+    // qui riassegno il valore false alla proprietà quando apro il component
+    this.respoDisponibilita = disponibilita;
+    this.isClosed = false;
+  }
+
+  // cambia il valore della proprietà chiamata dal figlio per non reinderizzare il component
+  onIsClosed(evento: string){
+    console.log(evento);
+    
+    this.isClosed = true;
+  }
 }

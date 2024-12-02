@@ -39,7 +39,15 @@
 
 <h3>Responsabili Corso</h3>
 @for(respo of listaRespoCorso; track respo.id){
-    <app-responsabile [respo]="respo"></app-responsabile>
+    <app-responsabile [respo]="respo" (disponibilita)="onMostraDisponibilita($event)"></app-responsabile>
+}
+
+@if(respoDisponibilita && !isClosed){
+    <!-- qui farò un evento in cui non passerò una proprietà ($event), 
+     perchè lavoro su una proprietà del parent -->
+    <app-corso [disponibilita]="respoDisponibilita" (isClosed)="onIsClosed($event)">
+        
+    </app-corso>
 }
 
 
