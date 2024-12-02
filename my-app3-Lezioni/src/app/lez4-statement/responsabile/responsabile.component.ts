@@ -20,8 +20,7 @@ export class ResponsabileComponent {
         stringaDisponibilita = "hai ancora posto per dei corsi";
       else
         stringaDisponibilita = "non hai più disponibilità";
-      
-        
+              
       // passo quello che voglio a un evento che scelgo io come chiamare quando creo l'oggetto
       this.disponibilita.emit(stringaDisponibilita);
     }

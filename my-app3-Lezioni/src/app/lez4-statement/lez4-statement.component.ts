@@ -1,9 +1,10 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Responsabile } from './responsabile/responsabile.model';
+
 import { ResponsabileComponent } from "./responsabile/responsabile.component";
 import { RESPO_DB } from './RESPO_DB';
 import { CorsoComponent } from './corsi/corso/corso.component';
+import { Responsabile } from './responsabile/responsabile.model';
 
 @Component({
   selector: 'app-lez4-statement',
