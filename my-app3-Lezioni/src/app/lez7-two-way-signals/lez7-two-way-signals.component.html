@@ -1,0 +1,28 @@
+<form (submit)="onSubmitForm()">
+
+    <p>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="nome">
+    </p>
+
+    <p>
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome" [(ngModel)]="cognome">
+    </p>
+
+    <p>
+       <label for="dataNascita">data di Nascita</label>
+       <input type="date" id="dataNascita" name="dataNascita"
+       [(ngModel)]="dataNascita">
+    </p>
+
+    <button class="btn btn-primary" type="submit">Registrati</button>
+</form>
+
+<button (click)="onEsempio()">Inserisci dati Esempio</button>
+
+<span>
+    {{nome() | uppercase}} {{cognome()}} {{dataNascita() | date: "dd/MM/yyyy"}}
+</span>
+
+<h2>Benvenuto ecc..</h2>
