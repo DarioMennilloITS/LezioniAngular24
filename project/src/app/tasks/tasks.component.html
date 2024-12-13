@@ -1,10 +1,10 @@
 @if(isAddingTask){
-    <app-new-task></app-new-task>
+    <app-new-task (close)="onCancelAddTask()" (add)="onAddTask($event)"></app-new-task>
 }
 
 
 <section>
-  <header>
+  <header class="mb-3">
     <h3>Todo dell'utente {{ nomeUser }}</h3>
 
     <button class="btn btn-success" (click)="onStartAddTask()">Add Task</button>

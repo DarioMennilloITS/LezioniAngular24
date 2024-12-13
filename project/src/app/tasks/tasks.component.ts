@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { LISTA_TASKS } from './lista-tasks';
 import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { NewTask } from './task/task.model';
 
 
 @Component({
@@ -33,4 +34,20 @@ export class TasksComponent {
     this.isAddingTask = true;
   }
 
+  onCancelAddTask(){
+    this.isAddingTask = false;
+  }
+
+
+  onAddTask(task: NewTask){
+    this.tasks.unshift({
+      id: new Date().getTime().toString(),
+      userId: this.userId,
+      title: task.title,
+      summary: task.summary,
+      dueDate: task.dueDate
+    });
+
+    this.isAddingTask=false;
+  }
 }

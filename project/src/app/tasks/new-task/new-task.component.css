@@ -11,6 +11,7 @@
 dialog{
     width: 50%;
     height: 50vh;
+    border-radius: 10%;
     background-color: rgb(255, 255, 255);
     top: 10rem;
     overflow: hidden;
