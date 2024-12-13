@@ -19,19 +19,19 @@
     <div class="col-4"> 
         <ul class="list-group">
             @for(user of users; track $index){
-                    <app-user [user]="user"></app-user>
+                    <app-user [user]="user" (select)="onSelectUser($event)"></app-user>
                 }    
         </ul>
     </div>
 
-    <!-- <div class="col-4">
+    <div class="col-4">
         @if(selectedUserId){
-            Stai selezionando {{selectedUser?.nome}}
-           
+            <!-- Stai selezionando {{selectedUser?.nome}} -->
+           <app-tasks [nomeUser]="selectedUser?.nome" [userId]="selectedUserId"></app-tasks>
         }@else {
             <p>Seleziona un utente per poter leggere i suoi tasks</p>
         }
-    </div> -->
+    </div>
 
 
 </div>

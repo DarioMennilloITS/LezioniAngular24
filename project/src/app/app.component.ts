@@ -16,4 +16,14 @@ export class AppComponent {
 
   users = LISTA_UTENTI;
 
+  selectedUserId!: string;
+
+  onSelectUser(id: string){
+    console.log("Stai cliccando sull'utente", id);
+    this.selectedUserId = id; 
+  }
+
+  get selectedUser(){
+    return this.users.find((u)=>{ return u.id === this.selectedUserId});
+  }
 }
