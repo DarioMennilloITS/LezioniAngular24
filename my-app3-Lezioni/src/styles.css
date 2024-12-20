@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.control-error{
+    margin: 0;
+}
+
+.control:has(.ng-invalid.ng-touched.ng-dirty)
+label{
+    color: orange;
+}
+
+input.ng-invalid.ng-touched.ng-dirty{
+    border-color: red ;
+    background-color: rgba(245, 98, 98, 0.733) !important;
+}

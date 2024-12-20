@@ -23,7 +23,7 @@ export class ParentiComponent {
 
     //ATT: visto che elimino un parente dalla lista devo poter vedere la lista aggiornata. Quindi non posso avere l'assegnazione qui nel costruttore sperando nella modifica
     // this.parenti = this.parentiService.getParenti()
-    this.logService.logInUser("Dario", "Mennillo");
+    // this.logService.logInUser("Dario", "Mennillo");
   }
 
   get allParenti(){

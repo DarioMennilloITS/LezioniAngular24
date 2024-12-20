@@ -32,8 +32,11 @@ export class ParentiService {
 ];
 
 //posso anche iniettare un service all'interno di un altro service
-  constructor(private logService: LogService) {
+  constructor(private logService: LogService) {  }
 
+  loggati(nome: string, cognome: string){
+    let authKey = nome+"23456789oiuhvoijhsvdoijs"+cognome;
+    this.logService.logInUser(authKey);  
   }
 
   getParenti(){

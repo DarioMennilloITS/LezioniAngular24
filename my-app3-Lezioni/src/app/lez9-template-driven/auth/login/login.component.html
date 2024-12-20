@@ -1,0 +1,63 @@
+
+<div class="col-4 m-5">
+    
+    <h2>Login</h2>
+    <!-- Step 1: permettere ad Angular di capire come trattare questo form.
+     Uso una local reference #form = "ngForm che è uno speciale identifier". Dopodiché passo al Submit il mio form intero -->
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        
+        <div class="mb-3 control">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email"
+            name="email"
+            ngModel
+            email
+            required
+            #email="ngModel">
+        </div>
+        
+        <div class="mb-3 control">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" 
+            name="password"
+            ngModel
+            required
+            minlength="6"
+            #password="ngModel">
+        </div>
+
+        <button class="btn btn-primary">Login</button>
+    </form>
+
+
+    <!-- ATT: data la local reference ho a disposizione il mio oggetto form con tutte le sue prop -->
+    <!-- @if(form.form.invalid && form.form.touched){
+        <p class="text-warning">
+            Valori non validi
+        </p>
+    } -->
+
+
+    <!-- Voglio controllare i singoli campi, quindi non mi resta che assegnare una localreference ad email e password -->
+
+    <!-- Percorso per poter accedere alle prop delle local Reference:
+     Form -> controls ->email & password -->
+
+    <!-- @if(email.touched && password.touched && form.form.invalid){
+        <p>
+            Valori non validi
+        </p>
+    } -->
+
+
+    @if(email.touched && email.dirty && email.invalid){
+        <p class="control-error">Email non valida</p>
+    }
+
+    @if(password.touched && password.dirty && password.invalid){
+        <p  class="control-error">Password non valida</p>
+    }
+
+
+    <!-- OSS: ci sono delle classi definite nello styles.css che corrispondono alle classi automatiche vhe angular mette a disposizione per noi. -->
+</div>

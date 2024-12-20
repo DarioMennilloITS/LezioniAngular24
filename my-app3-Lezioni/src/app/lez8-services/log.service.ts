@@ -8,8 +8,9 @@ export class LogService {
   constructor() { }
 
 
-  logInUser(name: string, lastName: string){
-    console.log("L'utente loggato si chiama: " + name + " " + lastName);
+  logInUser(authKey: string){
+    // console.log("L'utente loggato si chiama: " + name + " " + lastName);
+    return true;
   }
 
   logOutUser(){

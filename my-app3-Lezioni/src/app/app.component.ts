@@ -5,11 +5,12 @@ import { Lez5SignalsComponent } from "./lez5-signals/lez5-signals.component";
 import { Lez6TwoWayBindingDirectivesComponent } from "./lez6-two-way-binding-directives/lez6-two-way-binding-directives.component";
 import { Lez7TwoWaySignalsComponent } from "./lez7-two-way-signals/lez7-two-way-signals.component";
 import { Lez8ServicesComponent } from './lez8-services/lez8-services.component';
+import { Lez9TemplateDrivenComponent } from "./lez9-template-driven/lez9-template-driven.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Lez4StatementComponent, Lez5SignalsComponent, Lez6TwoWayBindingDirectivesComponent, Lez7TwoWaySignalsComponent, Lez8ServicesComponent],
+  imports: [RouterOutlet, Lez4StatementComponent, Lez5SignalsComponent, Lez6TwoWayBindingDirectivesComponent, Lez7TwoWaySignalsComponent, Lez8ServicesComponent, Lez9TemplateDrivenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
