@@ -1,0 +1,23 @@
+
+<div class="card mb-2">
+  <div class="card-body">
+    <h5 class="card-title mb-3">{{task.title}}</h5>
+    <p class="card-text">
+      Sommario: {{task.summary}}
+    </p>
+    <p class="mb-3">
+      <time> 
+        Da completare entro: 
+        {{task.dueDate | date: 'dd/MM/YYYY'}} 
+      </time>
+    </p>
+    
+    <button class="btn btn-primary" (click)="onComplete()">Completa</button> 
+    
+  </div>
+  </div>
+
+
+    
+
+    

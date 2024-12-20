@@ -1,0 +1,39 @@
+<div class="sfondo">
+
+  <app-card>
+  
+  <dialog open>
+    
+    <form (ngSubmit)="onSubmit()" class="mb-3">
+      <div class="mb-3">
+        <label for="title" class="form-label">Titolo</label>
+        <input type="text" class="form-control" id="title" 
+        name="title"
+        [(ngModel)]="enteredTitle">
+      </div>
+      <div class="mb-3">
+        <label for="sommario" class="form-label">Sommario</label>
+        <input type="text" class="form-control" id="sommario" 
+        name="sommario"
+        [(ngModel)]="enteredSummary">
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Data Scadenza</label>
+        <input type="date" class="form-control" id="date" 
+        name="dataScadenza"
+        [(ngModel)]="enteredDate">
+      </div>          
+      
+      <button type="submit" class="btn btn-success">Aggiungi</button>
+      <button type="button" class="btn btn-danger" (click)="onClose()">Chiudi</button>
+    </form>
+    
+    @if(isInvalid){
+      <p class="text-warning">Attenzione non hai compilato tutti i campi !</p>
+    }
+    
+  </dialog>
+  
+</app-card>
+
+</div>

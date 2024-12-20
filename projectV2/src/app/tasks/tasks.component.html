@@ -1,0 +1,18 @@
+@if(isAddingTask){
+    <app-new-task (close)="onCancelAddTask()" [userId]="userId" ></app-new-task>
+}
+
+
+<section>
+  <header class="mb-3">
+    <h3>Todo dell'utente {{ nomeUser }}</h3>
+
+    <button class="btn btn-success" (click)="onStartAddTask()">Add Task</button>
+  </header>
+
+  @if(selectedUserTask.length > 0){ @for(t of selectedUserTask; track $index){
+    <app-task [task]="t"></app-task>} 
+    }@else {
+    <h5>Questo utente non ha Task assegnati</h5>
+  }
+</section>

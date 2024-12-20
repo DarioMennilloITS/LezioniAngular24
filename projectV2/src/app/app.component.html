@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<h1 class="mt-5">Primo Progetto</h1>
+
+<!-- Renderizzar la lista degli utenti 
+ @for(utenti)
+ ATT: trasferite in input un intero oggetto
+    <li> <app-user [user]="user" (select)="onSelectUser()" /> </li>
+    li
+    li
+    -->
+
+<!-- @if(selectedUser){
+    <app-tasks>
+} -->
+<div class="container mt-5">
+<div class="row">
+
+    <div class="col-4"> 
+        <ul class="list-group">
+            @for(user of users; track $index){
+                    <app-user [user]="user" (select)="onSelectUser($event)"></app-user>
+                }    
+        </ul>
+    </div>
+
+    <div class="col-4">
+        @if(selectedUserId){
+            <!-- Stai selezionando {{selectedUser?.nome}} -->
+           <app-tasks [nomeUser]="selectedUser?.nome" [userId]="selectedUserId"></app-tasks>
+        }@else {
+            <p>Seleziona un utente per poter leggere i suoi tasks</p>
+        }
+    </div>
+
+
+</div>
+</div>
