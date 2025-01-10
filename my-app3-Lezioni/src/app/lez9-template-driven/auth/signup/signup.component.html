@@ -1,1 +1,81 @@
-<p>signup works!</p>
+<div class="col-4 m-5">
+
+    <h2>Registrati</h2>
+    
+    <!-- template variable or local reference -->
+    <form #formReg="ngForm" (ngSubmit)="onSubmit(formReg)">
+        
+        <div class="mb-3">
+            <label for="nome">Nome</label>
+            <input class="form-control" 
+            type="text" 
+            id="nome" 
+            name="nome"
+            required
+            ngModel
+            #nome="ngModel"
+            >
+        </div>
+        
+        <div class="mb-3">
+            <label for="cognome">Cognome</label>
+            <input class="form-control" 
+            type="text" 
+            id="cognome" 
+            name="cognome"
+            required
+            minlength="2"
+            ngModel
+            #cognome="ngModel">
+        </div>
+        
+        <div class="mb-3">
+            <label for="dataNascita">Data di nascita</label>
+            <input class="form-control" 
+            type="date" 
+            id="dataNascita" 
+            name="dataNascita"
+            required
+            ngModel
+            #dataNascita="ngModel">
+        </div>
+        
+        <div class="mb-3">
+            <label for="dataNascita">Password</label>
+            <input class="form-control" 
+            type="password" 
+            id="password" 
+            name="password"
+            required
+            minlength="6"
+            maxlength="20"
+            ngModel
+            #password="ngModel">
+        </div>
+        <button class="btn btn-primary">Registrati</button>
+
+        @if(formReg.form.invalid && formReg.form.touched){
+            <p>Attenzione, hai compilato male i campi o non li hai compilati del tutto</p>
+        }@else {
+
+        }
+    
+        @if(nome.invalid && nome.touched){
+            <p>Attenzione non hai compilato o hai compilato male il nome</p>
+        }@else {
+
+        }
+        
+        @if(cognome.invalid && cognome.touched){
+            <p>Attenzione non hai compilato o hai compilato male il cognome</p>
+        }@else {
+
+        }
+
+        @if(isSubmitted){
+            <p>Il form è stato correttamente inviato</p>
+        }@else {
+            <p>Il form non è stato inviato</p>
+        }
+    </form>
+</div>

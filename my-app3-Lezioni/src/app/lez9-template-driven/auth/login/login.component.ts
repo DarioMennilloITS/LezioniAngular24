@@ -11,7 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class LoginComponent {
 
   onSubmit(formData: NgForm){
-    console.log("Ciao, hai appena fatto il login", formData);
+    console.log(formData);
 
     //leggo i dati del form leggendo le prop del macro oggetto Form che è stato appena costruito
     const email = formData.form.value.email;

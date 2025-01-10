@@ -1,0 +1,41 @@
+<div class="col-3 m-4">
+
+    <h2>Login</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" 
+            class="form-control"
+            [formControl] = "form.controls.email"
+            required="">
+        </div>
+        
+        <!-- OSS: la riga 11 e la 19 sono equivalenti -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" 
+            class="form-control"
+            formControlName="password">
+        </div>
+        
+        
+        <button class="btn btn-primary">Login</button>
+
+
+        <!-- @if(form.controls.email.touched && form.controls.email.invalid){
+            <p>Attenzione, la tua email non è corretta</p>
+        } -->
+
+        <!-- Utilizzare un getter per la validazione dei campi -->
+        @if(isEmailValid){
+            <p>Attenzione la tua mail non è corretta</p>
+        }
+
+        @if(isPasswordValid){
+            <p>Attenzione, la tua password non è corretta</p>
+        }
+
+    </form>
+</div>
