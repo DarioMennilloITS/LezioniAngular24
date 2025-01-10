@@ -21,6 +21,9 @@ export class NewTaskComponent {
   
   isInvalid: boolean = false;
 
+  constructor(){
+
+  }
   onClose() {
     this.close.emit();
   }
