@@ -1,0 +1,20 @@
+<h2>Utenti</h2>
+<!-- <button (click)="getUsers()">Scarica Utenti</button> -->
+
+
+@if(isFetching()){
+    <div>Caricamento utenti in corso....</div>
+}@else{
+
+    <!-- ?? nullish operator, restituisce un array vuoto nel caso in cui il mio valore utenti() risulti undefined
+    let valori = [1,2,3] ?? [] ->> [1,2,3]
+    let valori = undefined ?? [] ->> []
+    -->
+    @for(utente of utenti() ?? []; track utente.id){
+        <div>
+            <p>Nome: {{utente.firstName}}</p>
+            <p>Cognome: {{utente.lastName}}</p>
+            <img src="{{utente.image}}" width="200px" height="auto" alt="">
+        </div>
+    }
+}

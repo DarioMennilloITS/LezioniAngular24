@@ -1,41 +1,41 @@
 {
     "users": [
         {
-            "id": 1,
-            "firstname": "Maria",
-            "lastname": "Rossi",
+            "id": "1",
+            "firstName": "Maria",
+            "lastName": "Rossi",
             "age": 22,
             "email": "marco.rossi@mail.com",
             "image": "http://localhost:3000/images/avatar1.jpg"
         },
         {
-            "id": 2,
-            "firstname": "Marco",
-            "lastname": "Gialli",
+            "id": "2",
+            "firstName": "Marco",
+            "lastName": "Gialli",
             "age": 25,
             "email": "marco.gialli@mail.com",
             "image": "http://localhost:3000/images/avatar2.jpg"
         },
         {
-            "id": 3,
-            "firstname": "Laura",
-            "lastname": "Bianchi",
+            "id": "3",
+            "firstName": "Laura",
+            "lastName": "Bianchi",
             "age": 26,
             "email": "laura.bianchi@mail.com",
             "image": "http://localhost:3000/images/avatar3.jpg"
         },
         {
-            "id": 4,
-            "firstname": "Luca",
-            "lastname": "Gialli",
+            "id": "4",
+            "firstName": "Luca",
+            "lastName": "Gialli",
             "age": 27,
             "email": "luca.gialli@mail.com",
             "image": "http://localhost:3000/images/avatar4.jpg"
         },
         {
-            "id": 5,
-            "firstname": "Sofia",
-            "lastname": "Rossi",
+            "id": "5",
+            "firstName": "Sofia",
+            "lastName": "Rossi",
             "age": 30,
             "email": "sofia.rossi@mail.com",
             "image": "http://localhost:3000/images/avatar5.jpg"
