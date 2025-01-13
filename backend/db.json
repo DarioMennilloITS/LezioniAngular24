@@ -1,0 +1,48 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstname": "Maria",
+            "lastname": "Rossi",
+            "age": 22,
+            "email": "marco.rossi@mail.com",
+            "image": "http://localhost:3000/images/avatar1.jpg"
+        },
+        {
+            "id": 2,
+            "firstname": "Marco",
+            "lastname": "Gialli",
+            "age": 25,
+            "email": "marco.gialli@mail.com",
+            "image": "http://localhost:3000/images/avatar2.jpg"
+        },
+        {
+            "id": 3,
+            "firstname": "Laura",
+            "lastname": "Bianchi",
+            "age": 26,
+            "email": "laura.bianchi@mail.com",
+            "image": "http://localhost:3000/images/avatar3.jpg"
+        },
+        {
+            "id": 4,
+            "firstname": "Luca",
+            "lastname": "Gialli",
+            "age": 27,
+            "email": "luca.gialli@mail.com",
+            "image": "http://localhost:3000/images/avatar4.jpg"
+        },
+        {
+            "id": 5,
+            "firstname": "Sofia",
+            "lastname": "Rossi",
+            "age": 30,
+            "email": "sofia.rossi@mail.com",
+            "image": "http://localhost:3000/images/avatar5.jpg"
+        }
+    ],
+
+    "autore": {
+        "nome": "Dario Mennillo"
+    }
+}

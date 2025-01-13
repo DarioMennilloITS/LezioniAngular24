@@ -1,0 +1,8 @@
+json-server --watch ./nomeFile.json  per leggere il file json
+
+Att: le prop al primo livello dell'oggetto json costituiranno gli endopoint del mio backend
+
+La cartella public serve per poter inserire file statici tipo immagini. 
+
+Quando devo servire anche i file statici lancio il comando 
+"json-server --watch db.json -s ./public"
