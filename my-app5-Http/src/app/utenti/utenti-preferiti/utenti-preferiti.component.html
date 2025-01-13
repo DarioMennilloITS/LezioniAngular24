@@ -1,0 +1,5 @@
+@if(utenti() !== undefined){
+    @for(u of utenti(); track u.id){
+       <li>{{u.firstName}} {{u.lastName}}</li>
+    }
+}

@@ -11,10 +11,10 @@
     let valori = undefined ?? [] ->> []
     -->
     @for(utente of utenti() ?? []; track utente.id){
-        <div>
-            <p>Nome: {{utente.firstName}}</p>
-            <p>Cognome: {{utente.lastName}}</p>
-            <img src="{{utente.image}}" width="200px" height="auto" alt="">
-        </div>
+        <app-utente [utente]="utente" (selectUser)="onSelectedUser($event)"></app-utente>
     }
 }
+
+
+<h2>Utenti Preferiti</h2>
+<app-utenti-preferiti></app-utenti-preferiti>
