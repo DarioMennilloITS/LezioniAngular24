@@ -1,0 +1,10 @@
+@for(utente of utenti; track utente.id){
+   <li>
+       <app-utente [utente]="utente"></app-utente>
+    </li>
+}
+
+<div class="mt-5">
+    <!-- Dentro questo router outlet renderizzo le info di ogni singolo utente INFOUTENTE -->
+    <router-outlet></router-outlet>
+</div>
