@@ -21,6 +21,9 @@ export class UtentiComponent implements OnInit{
   private httpClient = inject(HttpClient);
   private destroyRef = inject(DestroyRef);
   private usersService = inject(UtentiService);
+
+
+
   // getUsers(){
   //   this.httpClient.get<Utente[]>('http://localhost:3000/users')
   //   .subscribe({

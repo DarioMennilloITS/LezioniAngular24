@@ -42,4 +42,13 @@ export class UtentiPreferitiComponent implements OnInit{
     })
   }
 
+  
+  removeUtente(user: Utente){
+    this.usersService.deleteUser(user).subscribe({
+      next: (resData=>{
+        console.log("Stai eliminando", resData);
+      })
+    })
+  }
+
 }

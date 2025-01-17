@@ -1,5 +1,7 @@
 @if(utenti() !== undefined){
     @for(u of utenti(); track u.id){
-       <li>{{u.firstName}} {{u.lastName}}</li>
+       <li>{{u.firstName}} {{u.lastName}} 
+        <button (click)="removeUtente(u)"> X </button>
+    </li>
     }
 }

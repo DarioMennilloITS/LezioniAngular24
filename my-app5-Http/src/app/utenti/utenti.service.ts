@@ -51,4 +51,11 @@ export class UtentiService {
   }
 
 
+  deleteUser(user:Utente){
+    this.utentiPreferiti.update(
+      users => users.filter(u => u.id !== user.id)
+    )
+    return this.httpClient.delete('http://localhost:3000/utentiPreferiti/' + user.id);
+  }
+
 }
