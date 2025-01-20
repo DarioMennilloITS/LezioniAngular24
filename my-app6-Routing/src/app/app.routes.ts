@@ -20,10 +20,9 @@ export const routes: Routes = [
     {path: 'studenti', component: StudentiComponent, 
         children: [
             //le rotte children vengono concatenate in automatico. Adesso dovrò utilizzare un routerOutlet all'interno del component studenti
-            {path: 'corso', component: CorsoComponent} 
+            {path: 'corso', component: CorsoComponent} //www.dominio.it/studenti/corso/web
         ]
     },
-
 
     {path: 'not-found', component: NotFoundComponent},
     {path: '**', redirectTo: 'not-found'} //WILDCARD
