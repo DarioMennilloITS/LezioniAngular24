@@ -81,6 +81,12 @@
       }
     }
   ],
+  "reportCorsi": [
+    {
+      "nome":"Dario Mennillo",
+      "corso": "nuoto"
+    }
+  ],
   "autore": {
     "nome": "Dario Mennillo"
   }
